@@ -560,7 +560,7 @@ h4.characteristics__head::after {
 }
 
 .privacy_inner {
-  padding: 40px 0px;
+  padding: 40px 7px;
 }
 
 @media (max-width:1140px) {
