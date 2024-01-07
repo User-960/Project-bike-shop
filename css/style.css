@@ -24,8 +24,9 @@ a {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Tektur', sans-serif;
     font-weight: 400px;
+    letter-spacing: 1px;
     font-size: 14px;
     line-height: 17px;
     color: #131313;
@@ -41,6 +42,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #131313;
+    padding: 0px 50px;
 }
 
 .menu {
@@ -49,7 +52,6 @@ body {
 
 .menu__list {
     display: flex;
-
 }
 
 .menu__item+.menu__item {
@@ -58,17 +60,20 @@ body {
 
 .menu__link {
     text-transform: uppercase;
-    padding: 43px 20px;
+    padding: 58px 20px;
     transition: all .3s;
-}
-
-.menu__link:hover {
-    background-color: #131313;
     color: #fff;
 }
 
+.menu__link:hover {
+    /* background-color: #131313;
+    color: #fff; */
+    background-color: #fff;
+    color: #131313;
+}
+
 .bike {
-    padding: 100px 0 0px;
+    padding: 60px 0 0px;
 }
 
 .bike__inner {
@@ -100,6 +105,7 @@ body {
 .bike__text {
     max-width: 420px;
     margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
 }
 
 .bike__link {
@@ -210,6 +216,8 @@ body {
 
 .info__item-text {
     max-width: 450px;
+    padding-right: 60px;
+    font-family: 'Inter', sans-serif;
 }
 
 .characteristics {
@@ -221,8 +229,18 @@ h4.characteristics__head {
     margin-bottom: 40px;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 16px;
     line-height: 19px;
+    font-size: 20px;
+}
+
+h4.characteristics__head::after {
+    content: '';
+    width: 114px;
+    height: 2px;
+    background-color: #131313;
+    margin-left: 20px;
+    margin-top: 7px;
+    position: absolute;
 }
 
 .characteristics__inner {
@@ -250,7 +268,7 @@ h4.characteristics__head {
     line-height: 17px;
     background-color: #131313;
     color: #fff;
-    padding: 2px 0 3px;
+    padding: 4px;
     text-transform: uppercase;
 }
 
@@ -261,11 +279,15 @@ h4.characteristics__head {
 
 .characteristics__name {
     flex-basis: 285px;
-    padding-right: 25px;
+    padding: 0px 25px 4px 4px;
+    color: #6F6F6F;
+    font-family: 'Inter', sans-serif;
 }
 
 .characteristics__descr {
     flex-basis: 285px;
+    padding-bottom: 4px;
+    font-family: 'Inter', sans-serif;
 }
 
 .slider {
@@ -281,8 +303,13 @@ h4.characteristics__head {
     padding-left: 50px;
 }
 
+.slider__item-text {
+  padding: 5px 0px;
+  color: #bfbfbf;
+}
+
 .price {
-    margin-bottom: 100px;
+    margin-bottom: 300px;
 }
 
 .price__inner {
@@ -295,25 +322,26 @@ h4.characteristics__head {
 
 .form__title {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 19px;
     margin-bottom: 41px;
     text-transform: uppercase;
 }
 
+.form__title::after {
+    content: '';
+    width: 114px;
+    height: 2px;
+    background-color: #131313;
+    margin-left: 20px;
+    margin-top: 7px;
+    position: absolute;
+}
+
 .form__text {
     max-width: 298px;
     margin-bottom: 29px;
-}
-
-.form__input-name,
-.form__input-phone {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #131313;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    outline: none;
+    font-family: 'Inter', sans-serif;
 }
 
 .form__input-name::placeholder,
@@ -373,24 +401,6 @@ h4.characteristics__head {
     margin-bottom: 50px;
 }
 
-.form__btn {
-    background-color: #131313;
-    padding: 28px 71px 28px 81px;
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 1.1em;
-    cursor: pointer;
-    transition: all .3s;
-}
-
-.form__btn:hover {
-    background-color: #FF4040;
-}
-
 .form__input-radio:checked+.form__bike {
     display: block;
 }
@@ -406,7 +416,6 @@ h4.characteristics__head {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #FF4040;
     border-radius: 50%;
     transform: translateX(-50%)
 }
@@ -416,10 +425,96 @@ h4.characteristics__head {
     position: absolute;
     width: 220px;
     height: 100px;
-    border: 1px solid #FF4040;
     border-radius: 50%;
     top: 12px;
     left: 0;
+}
+
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 19px;
+  margin-bottom: 41px;
+  text-transform: uppercase;
+}
+
+.contacts__title::after {
+    content: '';
+    width: 114px;
+    height: 2px;
+    background-color: #131313;
+    margin-left: 20px;
+    margin-top: 7px;
+    position: absolute;
+}
+
+.contacts__item {
+  margin-bottom: 20px;
+}
+
+.contacts__item-address, .contacts__item-time, .contacts__item-phone {
+  font-weight: 700;
+  color: #6F6F6F;
+  margin-bottom: 5px;
+}
+
+.contacts__form {
+  max-width: 520px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px;
+  background-color: #131313;
+}
+
+.contacts__form-label {
+  color: #fff;
+  font-size: 32px;
+  line-height: 19px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.contacts__form-input {
+  width: 100%;
+  resize: vertical;
+  padding: 28px 24px;
+  border: 0;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #6F6F6F;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.contacts__form-btn {
+    padding: 14px 41px 14px 41px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all .3s;
+    background-color: transparent;
+    border: 1px solid #6F6F6F;
+
+    position: relative;
+    top: 50px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacts__form-btn:hover {
+    background-color: #6F6F6F;
 }
 
 .footer {
@@ -431,6 +526,7 @@ h4.characteristics__head {
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    padding: 0px 50px;
 }
 
 .footer__link {
@@ -463,14 +559,28 @@ h4.characteristics__head {
     margin-right: 10px;
 }
 
+.privacy_inner {
+  padding: 40px 0px;
+}
+
 @media (max-width:1140px) {
+    .price {
+      margin-bottom: 250px;
+    }
+
     .form__bike-img {
         width: 500px;
     }
 
     .form__bike {
-        top: 45px;
+        top: -14px;
+        left: 500px;
     }
+
+     .form__bike-price {
+        top: 0px;
+    }
+
     .menu__link,
     .bike__link {
         transition: all 0s;
@@ -486,10 +596,6 @@ h4.characteristics__head {
 }
 
 @media (max-width:1110px) {
-    .price {
-        margin-bottom: 50px;
-    }
-
     .bike__inner {
         flex-wrap: wrap;
     }
@@ -502,12 +608,15 @@ h4.characteristics__head {
         padding: 0;
     }
 
-    .bike__link {
-        margin-top: 30px;
-    }
-
     .bike__column {
         margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bike__link {
+        margin-top: 30px;
+        align-self: center;
     }
 
     .bike__column-slider {
@@ -570,14 +679,14 @@ h4.characteristics__head {
         flex-basis: 50%;
     }
 
-    .form__label-box {
-        margin-bottom: 300px;
+    .price {
+      margin-bottom: 160px;
     }
 
     .form__bike {
         top: auto;
-        bottom: 85px;
-        left: 0;
+        bottom: -92px;
+        left: 420px;
         right: auto;
     }
 
@@ -586,19 +695,53 @@ h4.characteristics__head {
     }
 
     .form__bike-price {
-        right: -20%;
         transform: translateX(100%);
-        left: auto;
+        left: -97px;
         top: 0;
+        transform: scale(0.7);
     }
 }
 
-@media (max-width: 780px) {
-    .form__bike-price {
-        right: 0;
-        top: -55px;
-        transform: translateX(50%);
+@media (max-width: 870px) {
+    .form__bike {
+        left: 320px;
+        transform: scale(0.8);
     }
+}
+
+@media (max-width: 730px) {
+  .form__bike {
+      left: 280px;
+      transform: scale(0.6);
+  }
+
+  .contacts__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacts__info {
+    margin-bottom: 20px;
+  }
+
+  .contacts__title, .contacts__item p, .contacts__item-address, .contacts__item-time, .contacts__item-phone {
+    text-align: center;
+  }
+
+  .contacts__item a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contacts__form {
+    margin-left: 0px;
+  }
+
+  .contacts__title::after {
+    display: none;
+  }
 }
 
 @media (max-width: 670px) {
@@ -622,12 +765,25 @@ h4.characteristics__head {
         width: 50%;
         margin-bottom: 15px;
     }
+
+    .footer__social {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+
+    .footer__social a {
+      margin: 5px 0px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 }
 
 @media (max-width: 640px) {
     .header__inner {
-        display: block;
-        text-align: center;
+        flex-direction: column;
+        padding: 0px 0px 50px 0px;
     }
 
     .menu {
@@ -657,6 +813,17 @@ h4.characteristics__head {
     .slider__item {
         padding-left: 1s0px;
     }
+
+    .price {
+      margin-bottom: 350px;
+    }
+
+    .form__bike {
+      top: 230px;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%) 
+  }
 }
 
 @media (max-width: 580px) {
@@ -692,6 +859,12 @@ h4.characteristics__head {
     }
     .footer__social {
         padding: 15px 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer__social a {
+        width: 0;
+        margin: 0px 15px;
     }
     .footer__contacts {
         display: flex;
@@ -700,13 +873,13 @@ h4.characteristics__head {
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 472px) {
     .menu__list {
         justify-content: space-between;
     }
 
     .menu__link {
-        padding: 25px 0px;
+        padding: 25px 10px;
     }
 
     .bike__link {
@@ -741,8 +914,36 @@ h4.characteristics__head {
         justify-content: center;
     }
     .form__bike{
+        top: 260px;
         right: 0;
     }
+
+    .form__bike-price {
+        top: -40px;
+    }
+    
+    .contacts__form {
+      padding: 40px;
+    }
+
+    .contacts__form-label {
+      font-size: 22px;
+    }
+
+    h4.characteristics__head::after, .form__title::after {
+      display: none;
+    }
+}
+
+@media (max-width: 400px) {
+  .menu__link {
+    padding: 25px 5px;
+    font-size: 12px;
+  }
+
+  .contacts__form-btn {
+    padding: 14px 21px 14px 21px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -752,5 +953,13 @@ h4.characteristics__head {
 
     .menu__link {
         font-size: 12px;
+    }
+
+    .contacts__form-label {
+      font-size: 18px;
+    }
+
+    .contacts__form-btn {
+      font-size: 12px;
     }
 }
